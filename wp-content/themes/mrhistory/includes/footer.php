@@ -1,13 +1,13 @@
 		</div><!-- #main -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="outro" class="site-footer" role="contentinfo">
 
 			<?php get_sidebar( 'footer' ); ?>
 
 			<div class="site-info">
 				
 			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
+		</footer><!-- #outro -->
 	</div><!-- #page -->
 	
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

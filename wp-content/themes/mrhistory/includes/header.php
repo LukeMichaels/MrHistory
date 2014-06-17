@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/fonts.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stylesheets/main.css">
         
+        <script src="<?php bloginfo('template_directory'); ?>/scripts/jquery-2.1.1.min.js"></script>
         
         <?php wp_head(); ?>
     </head>

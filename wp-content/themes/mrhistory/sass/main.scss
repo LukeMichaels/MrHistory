@@ -69,8 +69,83 @@ body {
 .container {
   @include container;
   @include clearfix;
-  background-color: #fbeecb;
+  z-index: 2;
 }
+
+// hero
+.hero {
+	float: left; 
+	@include span(10 of 10);
+	z-index: 5;
+}
+.hero h1 {
+	margin: 10% auto 5%;
+	@include span(10 of 10);
+}
+// :::::::::: psychadelic pattern
+// :::::::::: created by the super talented Ana Tudor http://codepen.io/thebabydino/pen/fojzu
+.psych-pattern {
+	position: fixed;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.eye {
+    position: fixed;
+    margin: 25.3% 38.55% 0px;
+    width: 25%;
+    z-index: 1;
+    overflow: hidden;
+}
+.eye img {
+	width: 100%;
+	height: auto;
+}
+.c {
+	position: fixed;
+	overflow: hidden;
+	margin: 0 20%;
+	width: 800px;
+	height: 800px;
+}
+
+
+
+
+// :::::::::: homepage
+// hero
+.top-hero {
+	@include span(2 of 10);
+}
+.c {
+  background: #7bd9d6;
+}
+
+
+// :::::::::::::::::::::::::::
+// :::::::::: Style ::::::::::
+// :::::::::::::::::::::::::::
+body {
+	font-size: 16px;
+	background: #7bd9d6;
+}
+// hero
+.hero h1 {
+	font-size: 2em;
+	color: $white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
 
 /**
  * Styles for AG grids & Container
@@ -114,16 +189,6 @@ body {
   // Alternatively, you can now use the span mixin with the full keyword to tell Susy this should be a 100% width 
   // @include span(full);
 }
-
-// :::::::::: homepage
-// hero
-.top-hero {
-	@include span(2 of 10);
-}
-
-// :::::::::::::::::::::::::::
-// :::::::::: Style ::::::::::
-// :::::::::::::::::::::::::::
 .ag1, .ag3 {
   background-color: #71dad2;
 }

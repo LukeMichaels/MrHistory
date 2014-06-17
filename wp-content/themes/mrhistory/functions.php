@@ -48,20 +48,3 @@ function less_current_category($cat){
 
 // add thumbnail support
 add_theme_support('post-thumbnails'); 
-
-/*-----------------------------------------------------------------------------------*/
-/* Enque Styles and Scripts
-/*-----------------------------------------------------------------------------------*/
-function less_scripts()  {		
-	// add theme scripts
-	// uncomment if you plan on writing javascript in an external file
-	wp_enqueue_script('medium-less', get_template_directory_uri() . '/js/theme.min.js');
-}
-function modify_jquery() {
-      wp_deregister_script('jquery');
-	  wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1');
-      wp_enqueue_script('jquery');	  
-}
-
-add_action('init', 'modify_jquery');
-add_action( 'wp_enqueue_scripts', 'less_scripts' );
