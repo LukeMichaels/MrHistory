@@ -1,0 +1,160 @@
+@import "variables";
+@import "compass";
+@import "normalize";
+@import "susy"; // http://susy.oddbird.net/
+@import "breakpoint"; // http://breakpoint-sass.com
+//@import "compass/typography/vertical_rhythm" // http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$susy: (
+global-box-sizing: border-box,
+	use-custom: (rem: true)
+);
+
+@include border-box-sizing;
+
+// :::::::::: CSS Reset ::::::::::
+// http://meyerweb.com/eric/tools/css/reset/ 
+// v2.0 | 20110126
+// License: none (public domain)
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// ::::::::::::::::::::::::::::
+// :::::::::: Layout ::::::::::
+// ::::::::::::::::::::::::::::
+body {
+	@include container(100%);
+}
+.container {
+  @include container;
+  @include clearfix;
+  background-color: #fbeecb;
+}
+
+/**
+ * Styles for AG grids & Container
+ */
+.ag1 {
+  @include span(2 of 10);
+}
+
+.ag2 {
+  @include span(6 of 10);
+  @include clearfix; 
+}
+
+.ag3 {
+  @include span(2 of 10 last);
+}
+.ag4 {
+  @include span(3 of 6);
+}
+
+.ag5 {
+  @include span(3 of 6 last);
+}
+.ag6 {
+  @include span(2 of 6);
+}
+
+.ag7 {
+  @include span(4 of 6 last);
+  @include clearfix;
+}
+.ag8 {
+  @include span(2 of 4);
+}
+
+.ag9 {
+  @include span(2 of 4 last);
+}
+.ag10 {
+  clear: both;
+  // Alternatively, you can now use the span mixin with the full keyword to tell Susy this should be a 100% width 
+  // @include span(full);
+}
+
+// :::::::::: homepage
+// hero
+.top-hero {
+	@include span(2 of 10);
+}
+
+// :::::::::::::::::::::::::::
+// :::::::::: Style ::::::::::
+// :::::::::::::::::::::::::::
+.ag1, .ag3 {
+  background-color: #71dad2;
+}
+
+.ag2 {
+  background-color: #fae7b3;
+}
+
+.ag4,.ag5,.ag8,.ag9 {
+  background-color: #ee9e9c;
+}
+
+.ag6 {
+  background-color: #f09671;
+}
+
+.ag7 {
+  background-color: #f6d784;
+}
+
+.ag10 {
+  background-color: #ea9fc3;
+}
+
+/**
+ * Text Styles
+ */
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
